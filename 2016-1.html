@@ -1,0 +1,36 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ipsina</title>
+	<style type="text/css">
+	h1 { font-family: "Microsoft Yahei"; 
+	font-weight:bold; 
+	color: blue;   
+	     }
+	     button,label{font-family:"Microsoft Yahei";}
+	 </style>
+</head>
+<body>
+	<h1>查询ip</h1>
+	<label>请输入查询的ip:</label>
+<input type="text" id="keyword" />
+<button id="search" onClick="sina()">查询</button><br/>
+<label>ip的信息为：</label><br/>
+<p id="searchResult"></p>
+<script type="text/javascript">
+function sina(){
+var request=new XMLHttpRequest();
+request.open("Get","http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js&ip=");
+request.send();
+request.onreadystatechange=function(){
+	if(request.readyState===4&&request.status===200){
+          document.getElementById("searchResult").innerHTML=request.responseText;
+	}
+	else
+		alert("发生错误"+request.status);
+}
+}
+</script>
+</body>
+</html>
