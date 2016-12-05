@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function getipinfo(){
+            var ip = document.getElementById('ip').value;
+            var scriptElement = document.createElement('script');              
+            scriptElement.src = 'http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js&ip=' + ip;
+            document.getElementsByTagName('head')[0].appendChild(scriptElement)
+            scriptElement.onload = scriptElement.onreadystatechange = function(){
+                document.getElementById('info').innerHTML = JSON.stringify(remote_ip_info);
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="ip">
+    <button type="button" onclick="getipinfo()">获取ip地址信息</button>
+    <p id="info"></p>
+</body>
+</html>
