@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>创建文本节点</title>
+<style type="text/css">
+
+.message{    
+	width:200px;
+	height:100px;
+	background-color:#CCC;}
+	
+</style>
+</head>
+<body>
+<script type="text/javascript">
+var element=document.createElement("p");
+element.setAttribute("className","message");//这句话创建不了样式
+//element.className="message";
+//var text=document.createTextNode("<strong>i love javascript</strong>");
+//element.appendChild(text);
+element.innerHTML="<strong>I love javascript</strong>";
+document.body.appendChild(element);
+</script> 
+
+</body>
+</html>
