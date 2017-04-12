@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>计时器</title>
+</head>
+<body> 
+<input id="input" value="20"/>	
+<button id="button">点击它</button>
+<script type="text/javascript">
+//点击它每隔1秒减1，直到减到0 
+document.getElementById("button").onclick=function(){
+	var input=document.getElementById("input").value;
+    var o=setInterval(function(){ 
+    	if(input>0){
+    		input--;
+    		document.getElementById("input").value=input;
+    		//一开始就是忘记了这句代码,把input的值赋给input;
+    	} 
+    	else
+    	clearInterval(o);//把setInterval的值返回给clearInterval
+},1000);
+}
+</script>
+</body>
+</html>
