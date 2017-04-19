@@ -1,0 +1,148 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta charset="utf-8">
+<title>nav</title>
+<script src="http:\\cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http:\\cdn.bootcss.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<link href="http:\\cdn.bootcss.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+<style type="text/css">
+*{
+	margin: 0;
+	padding: 0;
+}
+#nav{
+	width:100%;
+	height:70px;
+	line-height: 70px;
+	background-color: black;
+	position: relative;
+}
+#main{
+	width: 60%; 
+	height:100%;
+	margin: 0 auto;
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+
+.left>li{
+	color:white;
+	list-style-type: none;
+	display: inline-block;
+	margin-right: 20px;
+}
+.left li:hover{
+	background-color: 0066FF;
+	/*opacity: 0.5;
+	filter:alpha(opacity=50);*/
+}
+.right li{
+	color:white;
+	list-style-type: none;
+	display: inline-block;
+	margin-right:10px;
+}
+#deng{
+	position: relative;
+}
+#deng:before{
+	position:absolute;
+	content: "|";
+	left:120%;
+	top:0px;
+
+}
+#logo{
+	height: 100%;
+	position: absolute;
+	left: 30px;
+}
+#logo>span{
+	font-style: italic;
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #0066FF; 
+}
+#nav a{
+	text-decoration: none;
+}
+ a:link{
+	color:white;
+}
+ a:visited{
+	color:white;
+}
+.left a:hover,.left a:active{
+	color: white;
+}
+.right a:hover{
+	color:0066FF;
+}
+.right a:active{
+	color:0066FF;
+}
+#my{
+	position: relative;
+}
+#my ul li {
+	        display: block;
+            width: 100px;
+            height: 50px;
+            text-align: left;
+            line-height: 50px;
+            border-bottom: 1px solid gray;
+            
+}
+#my ul{
+	display: none;
+	padding: 0;
+	position: absolute;
+}
+#my:hover ul{
+	display: block;
+	background-color:0066FF;  
+}
+#my ul li:hover a{
+	color:red;
+}
+#my ul li button{
+	padding: 0px;
+	background-color: white;
+	display: inline-block;
+	margin-left: 10%;
+	/*opacity: 0;
+	filter:alpha(opacity=0);*/
+}
+#my ul li button span{
+	color: red;
+}
+
+</style>
+<body>
+<div id="nav">
+<div id="logo"><span>光伏软件</span></div>
+<div id="main">
+<ul class="left">
+<li id="my"><span class=></span><a href="">我的项目</a>
+<ul>
+<li><a href="">TEST</a><button><span class="glyphicon glyphicon-trash" aria-hidden="true"></button><span</li>
+<li><a href="">HTML</a><button><span class="glyphicon glyphicon-trash" aria-hidden="true"></button></li>	
+</ul>
+</li><!--改成下拉列表-->
+<li><a href="">新建项目</li></a>
+<li><a href="#">当前项目:</a><span>test</span></li>
+</ul>	
+<ul class="right">
+<li id="deng"><a href="">登录</a></li>
+<li><a href="">注销</a></li>	
+</ul>		
+</div>
+</body>
+	<p>测试文字</p>
+</head>
+</html>
