@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>伪类元素的基本用法</title>
+<style>
+#example:before{ content:"$我在前面"; color:red;}
+#example:after{ content:"我在后面￥"; color:red;}
+#div{
+	width: 50px;
+	height: 50px;
+	position: relative;
+	background-color: red;
+}
+#div:after{
+	content:"|";
+	position: absolute;
+	left: 60px;
+	top:15px;
+    color:blue;
+}
+</style>
+</head>
+<body>
+<div id="example">我是内容部分</div>
+<div id="div">伪类</div>
+
+<!--
+	:before和:after的作用就是在指定的元素内容（而不是元素本身）之前或者之后插入一个包含content属性指定内容的行内元素--!>
+</body>
+</html>
